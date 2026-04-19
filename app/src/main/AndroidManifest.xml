@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_app_003_restaurant">
         <activity
-            android:name=".StartersActivity"
-            android:label="Starters"
-            android:parentActivityName=".MainActivity"
+            android:name=".MainCourseActivity"
             android:exported="false" />
+        <activity
+            android:name=".StartersActivity"
+            android:exported="false"
+            android:label="Starters"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
