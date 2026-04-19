@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Android_app_003_restaurant</string>
     <string name="rest_name">The Best Pizza Ever</string>
-    <string name="starters">Starters</string>
+    <string name="dishes">Starters</string>
     <string name="main_course">Main Course</string>
-    <string name="starters_placeholder">This will be a starters list</string>
+    <string name="starters_placeholder">This will be a dishes list</string>
 </resources>
