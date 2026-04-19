@@ -1,4 +1,4 @@
- package com.example.android_app_003_restaurant;
+package com.example.android_app_003_restaurant;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -6,13 +6,11 @@ import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class StartersActivity extends AppCompatActivity {
 
     ListView startersList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,76 +23,90 @@ public class StartersActivity extends AppCompatActivity {
 //        });
         startersList = findViewById(R.id.list_view_starters);
 
-        String[] starterNames = {
-                "Trout and scallop dumplings",
-                "Sausage and garam masala gyoza",
-                "Jalapeno and chilli gyoza",
-                "Trout and feta soup",
-                "Horseradish and aubergine gyoza",
-                "Pheasant and trout gyoza",
-                "Garam masala and cabbage wontons",
-                "Mustard and garlic soup",
-                "Fish and rosemary parcels",
-                "Parsley and onion soup",
-                "Avocado and egg maki",
-                "Cod and pesto dumplings",
-                "Kale and cheese soup",
-                "Ricotta and sausage dumplings",
-                "Leek and aubergine dumplings",
-                "Swede and beetroot soup",
-                "Crab and tofu wontons",
-                "Artichoke and wine soup",
-                "Tofu and rosemary gyoza",
-                "Sprout and tomato soup"
+        Dish[] dishes = {
+                new Dish("Trout and scallop dumplings",
+                        "Thin pastry cases stuffed with smoked trout and scallop",
+                        "flour | water | salt | sugar | trout | scallop",
+                        12),
+                new Dish("Sausage and garam masala gyoza",
+                        "Thin pastry cases stuffed with chunky sausage and garam masala",
+                        "flour | water | salt | onions | sausage | garam masala",
+                        11),
+                new Dish("Jalapeno and chilli gyoza",
+                        "Thin pastry cases stuffed with fresh jalapeno and habanero chilli",
+                        "flour | water | salt | onions | jalapeno | chilli",
+                        10),
+                new Dish("Trout and feta soup",
+                        "Smoked trout and tangy feta combined into smooth soup",
+                        "onion | trout | feta",
+                        13),
+                new Dish("Horseradish and aubergine gyoza",
+                        "Thin pastry cases stuffed with fresh horseradish and salted aubergine",
+                        "flour | water | salt | onions | horseradish | aubergine",
+                        12),
+                new Dish("Pheasant and trout gyoza",
+                        "Thin pastry cases stuffed with pheasant and freshly-caught trout",
+                        "flour | water | salt | onions | pheasant | trout",
+                        10),
+                new Dish("Garam masala and cabbage wontons",
+                        "Thin wonton cases stuffed with garam masala and chinese cabbage",
+                        "flour | water | salt | onions | garam masala | cabbage",
+                        8),
+                new Dish("Mustard and garlic soup",
+                        "Dried mustard and fresh garlic combined into chunky soup",
+                        "garlic | mustard",
+                        13),
+                new Dish("Fish and rosemary parcels",
+                        "Thin filo pastry cases stuffed with fish and fresh rosemary",
+                        "flour | water | salt | onions | fish | rosemary",
+                        11),
+                new Dish("Parsley and onion soup",
+                        "Fresh parsley and caramalised onion combined into chunky soup",
+                        "onion | parsley",
+                        10),
+                new Dish("Avocado and egg maki",
+                        "Toasted seaweed wrapped around sushi rice, filled with fresh avocado and free range eggs",
+                        "rice | rice vinegar | sugar | avocado | egg",
+                        12),
+                new Dish("Cod and pesto dumplings",
+                        "Thin pastry cases stuffed with fresh cod and green pesto",
+                        "flour | water | salt | onions | cod | pesto",
+                        13),
+                new Dish("Kale and cheese soup",
+                        "Fresh kale and mature cheese combined into smooth soup",
+                        "onion | kale | cheese",
+                        20),
+                new Dish("Ricotta and sausage dumplings",
+                        "Thin pastry cases stuffed with ricotta and spicy sausage",
+                        "flour | water | salt | onions | ricotta | sausage",
+                        25),
+                new Dish("Leek and aubergine dumplings",
+                        "Thin pastry cases stuffed with fresh leek and marinaded aubergine",
+                        "flour | water | salt | onions | leek | aubergine",
+                        12),
+                new Dish("Swede and beetroot soup",
+                        "Swede and fresh beetroot combined into creamy soup",
+                        "onion | swede | beetroot | cream",
+                        14),
+                new Dish("Crab and tofu wontons",
+                        "Thin wonton cases stuffed with crab and silken tofu",
+                        "flour | water | salt | onions | crab | tofu",
+                        15),
+                new Dish("Artichoke and wine soup",
+                        "Fresh artichoke and red wine combined into creamy soup",
+                        "onion | artichoke | wine | cream",
+                        17),
+                new Dish("Tofu and rosemary gyoza",
+                        "Thin pastry cases stuffed with silken tofu and dried rosemary",
+                        "flour | water | salt | onions | tofu | rosemary",
+                        8),
+                new Dish("Sprout and tomato soup",
+                        "Fresh sprout and baby plum tomatoes combined into smooth soup",
+                        "onion | sprout | tomato",
+                        9)
         };
 
-        String[] starterDescriptions = {
-                "Thin pastry cases stuffed with smoked trout and scallop",
-                "Thin pastry cases stuffed with chunky sausage and garam masala",
-                "Thin pastry cases stuffed with fresh jalapeno and habanero chilli",
-                "Smoked trout and tangy feta combined into smooth soup",
-                "Thin pastry cases stuffed with fresh horseradish and salted aubergine",
-                "Thin pastry cases stuffed with pheasant and freshly-caught trout",
-                "Thin wonton cases stuffed with garam masala and chinese cabbage",
-                "Dried mustard and fresh garlic combined into chunky soup",
-                "Thin filo pastry cases stuffed with fish and fresh rosemary",
-                "Fresh parsley and caramalised onion combined into chunky soup",
-                "Toasted seaweed wrapped around sushi rice, filled with fresh avocado and free range eggs",
-                "Thin pastry cases stuffed with fresh cod and green pesto",
-                "Fresh kale and mature cheese combined into smooth soup",
-                "Thin pastry cases stuffed with ricotta and spicy sausage",
-                "Thin pastry cases stuffed with fresh leek and marinaded aubergine",
-                "Swede and fresh beetroot combined into creamy soup",
-                "Thin wonton cases stuffed with crab and silken tofu",
-                "Fresh artichoke and red wine combined into creamy soup",
-                "Thin pastry cases stuffed with silken tofu and dried rosemary",
-                "Fresh sprout and baby plum tomatoes combined into smooth soup"
-        };
-
-        String[] starterIngredients = {
-                "flour | water | salt | sugar | trout | scallop",
-                "flour | water | salt | onions | sausage | garam masala",
-                "flour | water | salt | onions | jalapeno | chilli",
-                "onion | trout | feta",
-                "flour | water | salt | onions | horseradish | aubergine",
-                "flour | water | salt | onions | pheasant | trout",
-                "flour | water | salt | onions | garam masala | cabbage",
-                "garlic | mustard",
-                "flour | water | salt | onions | fish | rosemary",
-                "onion | parsley",
-                "rice | rice vinegar | sugar | avocado | egg",
-                "flour | water | salt | onions | cod | pesto",
-                "onion | kale | cheese",
-                "flour | water | salt | onions | ricotta | sausage",
-                "flour | water | salt | onions | leek | aubergine",
-                "onion | swede | beetroot | cream",
-                "flour | water | salt | onions | crab | tofu",
-                "onion | artichoke | wine | cream",
-                "flour | water | salt | onions | tofu | rosemary",
-                "onion | sprout | tomato"
-        };
-
-        ArrayAdapter<String> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, starterNames);
+        ArrayAdapter<Dish> dishesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dishes);
         startersList.setAdapter(dishesAdapter);
     }
 }

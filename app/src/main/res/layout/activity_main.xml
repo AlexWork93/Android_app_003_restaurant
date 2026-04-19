@@ -37,7 +37,7 @@
                     android:id="@+id/text_view_starters"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/starters"
+                    android:text="@string/dishes"
                     android:textSize="24sp"
                     android:layout_gravity="center"/>
             </LinearLayout>
