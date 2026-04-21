@@ -3,10 +3,11 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:padding="40dp">
 
         <TextView
             android:id="@+id/text_view_restaurant_name"
@@ -28,26 +29,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:src="@drawable/starter"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/starter" />
+
                 <TextView
                     android:id="@+id/text_view_starters"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="@string/dishes"
-                    android:textSize="24sp"
-                    android:layout_gravity="center"/>
+                    android:textSize="24sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_main_course"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/card_view_starters"
-            android:id="@+id/card_view_main_course"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp">
 
@@ -55,11 +58,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:src="@drawable/main"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main" />
 
                 <TextView
                     android:id="@+id/text_view_main_course"
@@ -69,6 +73,36 @@
                     android:text="@string/main_course"
                     android:textSize="24sp" />
 
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_deserts"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_main_course"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/simone_stander_d9syq9nkkzk_unsplash__1_" />
+
+                <TextView
+                    android:id="@+id/text_view_deserts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/deserts"
+                    android:textSize="24sp" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

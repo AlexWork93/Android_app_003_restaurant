@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView starters;
     CardView main_course;
+    CardView deserts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         starters = findViewById(R.id.card_view_starters);
         main_course = findViewById(R.id.card_view_main_course);
+        deserts = findViewById(R.id.card_view_deserts);
 
         starters.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainCourseIntent = new Intent(MainActivity.this, MainCourseActivity.class);
                 startActivity(mainCourseIntent);
+            }
+        });
+
+        deserts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent desertsIntent = new Intent(MainActivity.this, Deserts_activity.class);
+                startActivity(desertsIntent);
             }
         });
     }
