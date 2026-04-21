@@ -3,5 +3,6 @@
     <string name="rest_name">The Best Pizza Ever</string>
     <string name="dishes">Starters</string>
     <string name="main_course">Main Course</string>
+    <string name="deserts">Deserts</string>
     <string name="starters_placeholder">This will be a dishes list</string>
 </resources>
